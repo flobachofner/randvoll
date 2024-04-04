@@ -11,15 +11,19 @@
         <h3>Drink different</h3>
         <hr>
         <p>Willkommen bei Randvoll! Unsere Gläser sind gefüllt - wie sieht's mit deinem aus?</p>
-        <p></p>
+        <p>Für Fragen kannst du uns gerne kontaktieren.</p>
     </main>
 
 <footer>
-    <p>© 2024 Randvoll. All Rights Reserved.<br><br>
+    <p>© <span id="copyright-year"></span> Randvoll. All Rights Reserved.<br><br>
     Randvoll GmbH<br>
     Schärenmoosstrasse 105<br>
     8052 Zürich</p>
 </footer>
 
 </body>
+<!-- Copyright Year -->
+<script>
+    document.getElementById("copyright-year").innerHTML= new Date().getFullYear();
+</script>
 </html>
