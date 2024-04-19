@@ -1,17 +1,22 @@
 body {
-    background-color: #f0f0f0;
+    color: white;
     text-align: center;
     margin: 0;
     line-height: 1.5;
+    background-image: url("background.jpg");
 }
 
 main {
     margin: 20px;
 }
 
+h3 {
+    font-style: italic;
+}
+
 
 footer {
-    background-color: #888;
+    background-color: rgba(200, 200, 200, 0.4);
     color: #fff;
     text-align: center;
     position: fixed;
