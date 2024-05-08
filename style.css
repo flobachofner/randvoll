@@ -1,6 +1,7 @@
 body {
     color: white;
     text-align: center;
+    font-size: 18px;
     margin: 0;
     line-height: 1.5;
     background-image: url("background.jpg");
@@ -12,6 +13,7 @@ main {
 
 #logo {
     width: 400px;
+    max-width: 80%;
     margin: 0 auto;
 }
 
