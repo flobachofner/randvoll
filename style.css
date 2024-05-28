@@ -1,6 +1,5 @@
 body {
     color: #FAF9F6;
-    text-align: center;
     font-size: 18px;
     margin: 0;
     line-height: 1.5;
@@ -14,17 +13,26 @@ main {
 }
 
 #logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 400px;
     max-width: 80%;
-    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
 }
 
 h3 {
     font-style: italic;
+    text-align: center;
 }
 
 p {
     margin: 0;
+    text-align: center;
 }
 
 a h3 {
