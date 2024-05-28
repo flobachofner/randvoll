@@ -27,6 +27,13 @@ p {
     margin: 0;
 }
 
+a h3 {
+    color: #FAF9F6;
+    text-decoration: none !important;
+}
+
+
+
 footer {
     background-color: rgba(200, 200, 200, 0.4);
     color: #fff;
