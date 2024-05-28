@@ -9,6 +9,8 @@ body {
 
 main {
     margin: 20px;
+    height: auto;
+    padding-bottom: 150px;
 }
 
 #logo {
@@ -21,12 +23,14 @@ h3 {
     font-style: italic;
 }
 
+p {
+    margin: 0;
+}
 
 footer {
     background-color: rgba(200, 200, 200, 0.4);
     color: #fff;
     text-align: center;
-    position: fixed;
-    bottom: 0;
     width: 100vw;
+    padding: 20px 0;
 }
