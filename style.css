@@ -4,12 +4,14 @@ body {
     margin: 0;
     line-height: 1.5;
     background-image: url("background.jpg");
+    min-height: 100vh;
 }
 
 main {
     margin: 20px;
     height: auto;
     padding-bottom: 150px;
+    flex: 1;
 }
 
 #logo {
