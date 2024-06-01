@@ -1,4 +1,9 @@
+html, body {
+    height: 100%;
+}
 body {
+    display: flex;
+    flex-direction: column;
     color: #FAF9F6;
     font-size: 18px;
     margin: 0;
@@ -11,7 +16,7 @@ main {
     margin: 20px;
     height: auto;
     padding-bottom: 150px;
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 #logo {
@@ -42,9 +47,8 @@ a h3 {
     text-decoration: none !important;
 }
 
-
-
 footer {
+    flex-shrink: 0;
     background-color: rgba(200, 200, 200, 0.4);
     color: #fff;
     text-align: center;
