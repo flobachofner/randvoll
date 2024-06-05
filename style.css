@@ -9,7 +9,8 @@ body {
     font-size: 18px;
     margin: 0;
     line-height: 1.5;
-    background-image: url("background.jpg");
+    background-color: black;
+    /*background-image: url("background.jpg");*/
     min-height: 100vh;
 }
 
