@@ -58,7 +58,24 @@ h2 {
     text-align: center;
     padding: 10px 50px;
     margin-top: 100px;
+    display: inline-block;
+    overflow: hidden;
 }
+
+h2 span {
+    display: inline-block;
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
 
 h3 {
     font-style: italic;
@@ -73,6 +90,24 @@ p {
 a h3 {
     color: #FAF9F6;
     text-decoration: none !important;
+}
+
+strong {
+    position: relative;
+    display: inline-block;
+}
+
+strong::after {
+    content: '';
+    position: absolute;
+    left: -30px;
+    right: -20px;
+    bottom: -2px;
+    height: 4px;
+    background: linear-gradient(135deg, transparent 10%, red 40%, red 60%, transparent 90%);
+    border-radius: 3px;
+    transform: rotate(-4deg);
+    z-index: -1;
 }
 
 hr {

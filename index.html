@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Randvoll GmbH</title>
+    <meta name="description" content="Die Zürcher Getränkefirma mit den besten Getränken.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>randvoll GmbH</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="scrollbar.css">
 </head>
 <body>
     <main>
         <img src="img/logo.png" alt="Randvoll Logo" id="logo">
-        <h3>Drink different</h3>
+        <h3><strong>die</strong> Getränkefirma.</h3>
         <hr>
         <img src="img/gifs/zDisco-BAR.gif" alt="discobar" style="width: 100%; margin-top: 10px;">
         <hr>
@@ -29,14 +31,14 @@
 
         <div class="img-div">
             <img src="img/gifs/nitro.gif" style="height: 70px;" alt="nitro">
-            <h2>NITROMOST</h2>
+            <h2 id="animate-text">NITROMOST</h2>
             <img src="img/gifs/newNitro.gif" style="height: 70px; padding-left: 10px;" alt="nitro">
         </div>
         <p>DER Süssmost mit Schuss. Unser aktuelles Getränk, alle Infos unter <a href="https://nitromost.ch">www.nitromost.ch</a>.</p>
     </main>
 <footer>
-    <p>© <span id="copyright-year"></span> Randvoll. Alle Rechte vorbehalten.<br><br>
-        Randvoll GmbH | Schärenmoosstrasse 105 | 8052 Züri<br>
+    <p>© <span id="copyright-year"></span> randvoll. Alle Rechte vorbehalten.<br><br>
+        randvoll GmbH | Schärenmoosstrasse 105 | 8052 Züri<br>
         079 575 51 22 | drink@nitromost.ch | CHE-464.547.237</p>
 </footer>
 
@@ -44,5 +46,17 @@
 <!-- Copyright Year -->
 <script>
     document.getElementById("copyright-year").innerHTML= new Date().getFullYear();
+
+    const h2 = document.getElementById('animate-text');
+    const text = h2.textContent;
+    h2.innerHTML = '';
+
+    text.split('').forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char;
+        span.style.animationDelay = `${index * 0.2}s`;
+        h2.appendChild(span);
+    });
+
 </script>
 </html>
