@@ -1,6 +1,6 @@
 html, body {
     height: 100%;
-    cursor: url("img/cursor/normal.png"), auto;
+    cursor: url("img/cursor/normal.png"), auto !important;
 }
 body {
     display: flex;
@@ -88,12 +88,12 @@ p {
     text-align: center;
 }
 
-a:hover {
-    cursor: url("img/cursor/hover.png"), auto;
+a:hover, button:hover {
+    cursor: url("img/cursor/hover.png"), auto !important;
 }
 
-a:active {
-    cursor: url("img/cursor/click.png"), auto;
+a:active, button:hover {
+    cursor: url("img/cursor/click.png"), auto !important;
 }
 
 a h3 {
@@ -148,6 +148,10 @@ nav {
 .nav-active:hover {
     border-left: 2px solid #FAF9F6;
     border-right: 1px solid #FAF9F6;
+    cursor: url("img/cursor/hover.png"), auto !important;
+}
+.nav-active:active {
+    cursor: url("img/cursor/click.png"), auto !important;
 }
 
 
