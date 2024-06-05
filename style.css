@@ -88,6 +88,10 @@ p {
     text-align: center;
 }
 
+a {
+    color: red;
+}
+
 a:hover, button:hover {
     cursor: url("img/cursor/hover.png"), auto !important;
 }
@@ -126,8 +130,31 @@ hr {
 .img-div {
     display: flex;
     justify-content: center;
-    align-items: baseline;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
+.img-div img {
+    height: 70px;
+}
+
+.img-div h2 {
+    margin: 0 10px;
+}
+@media (max-width: 600px) {
+    .img-div {
+        flex-direction: column;
+    }
+
+    .img-div h2 {
+        margin: 10px 0;
+    }
+
+    .img-div img {
+        margin: 5px 0;
+    }
+}
+
 
 nav {
     display: flex;
@@ -139,18 +166,22 @@ nav {
     color: #FAF9F6;
     text-decoration: none;
     padding: 0 40px;
+    border-bottom: 1px solid #FAF9F6;
+    border-right: 1px solid #FAF9F6;
+    border-left: 1px solid #FAF9F6;
 }
 .nav-active {
-    border-bottom: 2px solid #FAF9F6;
+    border-bottom: 3px solid #FAF9F6;
     border-right: 2px solid #FAF9F6;
     border-left: 1px solid #FAF9F6;
 }
-.nav-active:hover {
-    border-left: 2px solid #FAF9F6;
-    border-right: 1px solid #FAF9F6;
+.nav-link:hover {
+    border-bottom: 3px solid #FAF9F6;
+    border-right: 2px solid #FAF9F6;
+    border-left: 1px solid #FAF9F6;
     cursor: url("img/cursor/hover.png"), auto !important;
 }
-.nav-active:active {
+.nav-link:active {
     cursor: url("img/cursor/click.png"), auto !important;
 }
 
