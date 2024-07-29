@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Lerne das Team der Getränkefirma mit den besten Getränken kennen.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randvoll GmbH | Über uns</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="scrollbar.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ0T2K1FH2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EJ0T2K1FH2');
+  </script>
+</head>
+<body>
+<main>
+  <video autoplay loop muted playsinline poster="img/background-bubbles.mov">
+  </video>
+
+  <a href="index.html"><img src="img/logo-randvoll.png" alt="Randvoll Logo" id="logo"></a>
+  <h3><strong>die</strong> Getränkefirma.</h3>
+  <hr>
+  <img src="img/gifs/zDisco-BAR.gif" alt="discobar" style="width: 100%; margin-top: 10px;">
+  <hr>
+  <nav>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="store.html" class="nav-link">Store</a>
+    <a href="about.html" class="nav-link nav-active">Über uns</a>
+    <a href="kontakt.html" class="nav-link">Kontakt</a>
+  </nav>
+
+    <div style="text-align: center;">
+        <h2>Über uns</h2>
+        <p>Wir sind stolz auf unser Team, das die besten Getränke für dich kreiert.</p><br>
+        <div class="employee-container">
+            <div class="employee">
+                <img src="img/employees/employee1.jpg" alt="Jannis" style="width: 150px;">
+                <h3>Jannis</h3>
+                <h4>CFO</h4>
+                <p>Jannis ist der Kopf hinter Randvoll und sorgt dafür, dass alles reibungslos läuft.</p>
+            </div>
+            <div class="employee">
+                <img src="img/employees/employee2.jpg" alt="Päde" style="width: 150px;">
+                <h3>Päde</h3>
+                <h4>Marketing</h4>
+                <p>Päde ist verantwortlich für unsere Marketingstrategien und sorgt dafür, dass jede:r von unseren Getränken erfährt.</p>
+            </div>
+            <div class="employee">
+                <img src="img/employees/employee3.jpg" alt="Flo" style="width: 150px;">
+                <h3>Flo</h3>
+                <h4>Who knows</h4>
+                <p>Flo entwickelt neue Getränke und verbessert ständig unsere bestehenden Produkte.</p>
+            </div>
+        </div>
+    </div>
+
+  <img src="img/gifs/lines.gif" alt="lines-bar" style="width: 100%; margin-top: 100px;">
+
+</main>
+
+<footer>
+  <p>randvoll GmbH | Schärenmoosstrasse 105 | 8052 Züri<br>
+    079 575 51 22 | drink@nitromost.ch | CHE-464.547.237</p>
+  <img src="img/gifs/thanksvisit_clr.gif" alt="thanks" style="width: 20%; margin-top: 10px;">
+  <p>© <span id="copyright-year"></span> randvoll. Alle Rechte vorbehalten.</p>
+</footer>
+
+</body>
+<!-- Copyright Year -->
+<script>
+  document.getElementById("copyright-year").innerHTML= new Date().getFullYear();
+</script>
+</html>
