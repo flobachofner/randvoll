@@ -196,11 +196,13 @@ nav {
     cursor: url("img/cursor/click.png"), auto !important;
 }
 
+.storeContainer {
+    margin: 100px 0 0 0;
+}
 
-
-
-
-
+.ecwid-productBrowser {
+    background-color: transparent;
+}
 
 
 
