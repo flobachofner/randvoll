@@ -217,6 +217,16 @@ nav {
     background-color: transparent;
 }
 
+.cart-logo {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+
+.ec-page-title__featured-products {
+    display: none;
+}
+
 
 /* Über uns */
 /* Default mobile layout */
