@@ -70,6 +70,44 @@
     <p>© <span id="copyright-year"></span> randvoll GmbH. Alle Rechte vorbehalten.</p>
 </footer>
 
+<!-- Age Modal -->
+<div id="ageModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <img src="img/gifs/caution.gif" alt="left" class="modal-gif">
+            <h2>Öh sori rasch</h2>
+            <img src="img/gifs/caution-2.gif" alt="right" class="modal-gif">
+        </div>
+
+
+        <p>Da wir Alkohol verkaufen musst du (mindestens) 18 Jahre alt sein, um diese Seite zu "betreten".</p>
+        <button id="yesBtn">Bin ich</button>
+        <button id="noBtn">Bin ich nicht</button>
+
+        <img src="img/gifs/adultbanner01.gif" alt="age" class="modal-banner">
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const modal = document.getElementById("ageModal");
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+
+        // Show modal on page load
+        modal.style.display = "flex";
+
+        yesBtn.addEventListener("click", function() {
+            modal.style.display = "none"; // Hide modal
+        });
+
+        noBtn.addEventListener("click", function() {
+            window.location.href = "https://www.instagram.com/randvoll.gmbh/";
+        });
+    });
+</script>
+
 </body>
 <!-- Copyright Year -->
 <script>
