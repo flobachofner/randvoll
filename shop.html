@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Der Store der Getränkefirma mit den besten Getränken.">
@@ -11,16 +12,17 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ0T2K1FH2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-EJ0T2K1FH2');
     </script>
 </head>
+
 <body>
 
-<video autoplay loop muted playsinline poster="img/background-bubbles.mov">
-</video>
+    <video autoplay loop muted playsinline poster="img/background-bubbles.mov">
+    </video>
 
     <main>
         <a href="index.html"><img src="img/logo-randvoll.png" alt="Randvoll Logo" id="logo"></a>
@@ -28,7 +30,9 @@
         <div class="cart-logo">
             <div class="ec-cart-widget"></div>
             <div>
-                <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?106886038&data_platform=code&data_date=2025-02-18" charset="utf-8"></script>
+                <script data-cfasync="false" type="text/javascript"
+                    src="https://app.ecwid.com/script.js?106886038&data_platform=code&data_date=2025-02-18"
+                    charset="utf-8"></script>
                 <script type="text/javascript">Ecwid.init();</script>
             </div>
         </div>
@@ -48,12 +52,25 @@
         </nav>
 
         <p><br>Willkommen im Onlinestore.
-        <br><br>Versand CH: 15 Franken<br>Abholung: Gratis dänk</p>
+            <br><br>Versand CH: 15 Franken<br>Abholung: Gratis dänk
+        </p>
+
+
+        <div>
+            <h3>!! DISCOLIMO SOLD OUT !!</h3>
+            <p>Wir sind unter HOCHDRUCK an der aktuellen Produktion, voraussichtlich kriegst du die Discolimo dann ab
+                Juli wieder. Via <a href="https://t.me/randvoll_gmbh">Telegram</a> informieren wir dann wenn es soweit
+                ist.</p>
+        </div>
 
         <div class="storeContainer">
             <div id="my-store-106886038"></div>
             <div>
-                <script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?106886038&data_platform=code&data_date=2024-07-29" charset="utf-8"></script><script type="text/javascript"> xProductBrowser("categoriesPerRow=3","views=grid(20,3) list(60) table(60)","categoryView=grid","searchView=list","id=my-store-106886038");</script>
+                <script data-cfasync="false" type="text/javascript"
+                    src="https://app.ecwid.com/script.js?106886038&data_platform=code&data_date=2024-07-29"
+                    charset="utf-8"></script>
+                <script
+                    type="text/javascript"> xProductBrowser("categoriesPerRow=3", "views=grid(20,3) list(60) table(60)", "categoryView=grid", "searchView=list", "id=my-store-106886038");</script>
             </div>
         </div>
 
@@ -63,54 +80,55 @@
 
     </main>
 
-<footer>
-    <p>randvoll GmbH | Schärenmoosstrasse 105 | 8052 Züri<br>
-        079 575 51 22 | prost@randvoll.gmbh | CHE-464.547.237</p>
-    <img src="img/gifs/thanksvorvisiting.gif" alt="thanks" style="width: 20%; margin-top: 10px;">
-    <p>© <span id="copyright-year"></span> randvoll GmbH. Alle Rechte vorbehalten.</p>
-</footer>
+    <footer>
+        <p>randvoll GmbH | Schärenmoosstrasse 105 | 8052 Züri<br>
+            079 575 51 22 | prost@randvoll.gmbh | CHE-464.547.237</p>
+        <img src="img/gifs/thanksvorvisiting.gif" alt="thanks" style="width: 20%; margin-top: 10px;">
+        <p>© <span id="copyright-year"></span> randvoll GmbH. Alle Rechte vorbehalten.</p>
+    </footer>
 
-<!-- Age Modal -->
-<div id="ageModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <img src="img/gifs/caution.gif" alt="left" class="modal-gif">
-            <h2>Öh sori rasch</h2>
-            <img src="img/gifs/caution-2.gif" alt="right" class="modal-gif">
+    <!-- Age Modal -->
+    <div id="ageModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="img/gifs/caution.gif" alt="left" class="modal-gif">
+                <h2>Öh sori rasch</h2>
+                <img src="img/gifs/caution-2.gif" alt="right" class="modal-gif">
+            </div>
+
+
+            <p>Da wir Alkohol verkaufen musst du (mindestens) 18 Jahre alt sein, um diese Seite zu "betreten".</p>
+            <button id="yesBtn">Bin ich</button>
+            <button id="noBtn">Bin ich nicht</button>
+
+            <img src="img/gifs/adultbanner01.gif" alt="age" class="modal-banner">
         </div>
 
-
-        <p>Da wir Alkohol verkaufen musst du (mindestens) 18 Jahre alt sein, um diese Seite zu "betreten".</p>
-        <button id="yesBtn">Bin ich</button>
-        <button id="noBtn">Bin ich nicht</button>
-
-        <img src="img/gifs/adultbanner01.gif" alt="age" class="modal-banner">
     </div>
 
-</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("ageModal");
+            const yesBtn = document.getElementById("yesBtn");
+            const noBtn = document.getElementById("noBtn");
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const modal = document.getElementById("ageModal");
-        const yesBtn = document.getElementById("yesBtn");
-        const noBtn = document.getElementById("noBtn");
+            // Show modal on page load
+            modal.style.display = "flex";
 
-        // Show modal on page load
-        modal.style.display = "flex";
+            yesBtn.addEventListener("click", function () {
+                modal.style.display = "none"; // Hide modal
+            });
 
-        yesBtn.addEventListener("click", function() {
-            modal.style.display = "none"; // Hide modal
+            noBtn.addEventListener("click", function () {
+                window.location.href = "https://www.instagram.com/randvoll.gmbh/";
+            });
         });
-
-        noBtn.addEventListener("click", function() {
-            window.location.href = "https://www.instagram.com/randvoll.gmbh/";
-        });
-    });
-</script>
+    </script>
 
 </body>
 <!-- Copyright Year -->
 <script>
-    document.getElementById("copyright-year").innerHTML= new Date().getFullYear();
+    document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
 </script>
+
 </html>
