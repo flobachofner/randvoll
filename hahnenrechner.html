@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Umrechner für verschiedene Einheiten in Hähne.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>randvoll GmbH | Umrechner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scrollbar.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ0T2K1FH2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-EJ0T2K1FH2');
+    </script>
+</head>
+
+<body>
+    <main>
+        <video autoplay loop muted playsinline poster="img/background-bubbles.mov">
+        </video>
+
+        <a href="index.html"><img src="img/logo-randvoll.png" alt="randvoll GmbH Logo" id="logo"></a>
+        <h1 class="visually-hidden">randvoll GmbH</h1>
+        <h3><strong>die</strong> Getränkefirma.</h3>
+        <hr>
+        <img src="img/gifs/zDisco-BAR.gif" alt="discobar" style="width: 100%; margin-top: 10px;">
+        <hr>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="shop.html" class="nav-link">Shop</a>
+            <a href="projekte.html" class="nav-link">Projekte</a>
+            <a href="about.html" class="nav-link">Über uns</a>
+            <a href="kontakt.html" class="nav-link">Kontakt</a>
+        </nav>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <h2>Hähnerechner</h2>
+            <p>Gib ein, was du umrechnen möchtest.</p>
+            <form id="umrechner-form" style="margin-top: 30px;">
+                <input type="number" id="input-value" min="0" step="any" placeholder="Menge" required
+                    style="font-size: 1.2em; padding: 5px; width: 120px; margin-right: 30px;">
+                <select id="input-unit" style="font-size: 1.2em; padding: 5px;"></select>
+                <button type="submit" style="font-size: 1.2em; padding: 5px 15px; margin-left: 10px;">Umrechnen</button>
+            </form>
+            <div id="result" style="margin-top: 30px; font-size: 1.5em;"></div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>randvoll GmbH | Pfingstweidstrasse 31 | 8005 Züri<br>
+            079 575 51 22 | prost@randvoll.gmbh | CHE-464.547.237</p>
+        <img src="img/gifs/thanksvisit_clr.gif" alt="thanks" style="width: 20%; margin-top: 10px;">
+        <p>© <span id="copyright-year"></span> randvoll GmbH. Alle Rechte vorbehalten.</p>
+    </footer>
+
+</body>
+<!-- Copyright Year & Converter Script -->
+<script>
+    document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
+
+    const units = [
+        { value: 'liter', label: 'Liter', per: 1, haehne: 2 },
+        { value: 'milliliter', label: 'Milliliter', per: 1, haehne: 0.002 },
+        { value: 'km', label: 'Kilometer', per: 1, haehne: 1.7 },
+        { value: 'chf', label: 'CHF', per: 1, haehne: 0.142 },
+        { value: 'min', label: 'Minuten', per: 1, haehne: 0.18 },
+        { value: 'doener', label: 'Döner', per: 1, haehne: 1.7 },
+        { value: 'knt', label: 'Knoten', per: 1, haehne: 3.2 },
+        { value: 'rpk', label: '/Retraite/Kopf', per: 1, haehne: 28 },
+        { value: 'wein', label: 'Weinglas', per: 1, haehne: 0.8 },
+        { value: 'nks', label: 'Nesquik Shot', per: 1, haehne: 0.6 }
+    ];
+
+    // Populate dropdown
+    const select = document.getElementById('input-unit');
+    units.forEach(unit => {
+        const option = document.createElement('option');
+        option.value = unit.value;
+        option.textContent = unit.label;
+        select.appendChild(option);
+    });
+
+    document.getElementById('umrechner-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const value = parseFloat(document.getElementById('input-value').value);
+        const selectedValue = document.getElementById('input-unit').value;
+        const unit = units.find(u => u.value === selectedValue);
+        if (!unit) {
+            document.getElementById('result').innerHTML = 'Ungültige Einheit.';
+            return;
+        }
+        // Calculate how many "per" units are in the input
+        const factor = value / unit.per;
+        const haehne = factor * unit.haehne;
+        document.getElementById('result').innerHTML = `${value} ${unit.label} = <strong>${haehne.toFixed(2)} Hähne</strong>`;
+    });
+</script>
+
+</html>
